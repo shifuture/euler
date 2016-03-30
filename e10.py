@@ -1,17 +1,15 @@
 def F(num):
     fs = []
-    rs = []
+    rs = 0
     divider = 2
     while True:
         if divider > num:
             break
         if isFactor(divider, fs):
             fs.append(divider)
-            if num%divider == 0:
-                rs.append(divider)
-                num = num/divider
+            rs += divider
         divider += 1
-    return rs
+    return fs, rs
 
 
 def isFactor(num, fs):
