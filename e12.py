@@ -1,4 +1,9 @@
 from sets import Set
+import math
+
+'''
+https://projecteuler.net/problem=12
+'''
 
 def F(num):
     i=1
@@ -22,6 +27,6 @@ def getFactors(num):
             rs.add(factor)
             rs.add(num/factor)
         factor+=1
-        if factor > int(num/2)+1:
+        if factor > int(math.sqrt(num))+1:
             break;
     return rs
